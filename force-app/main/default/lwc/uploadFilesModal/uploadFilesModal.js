@@ -5,6 +5,11 @@ export default class UploadFilesModal extends LightningElement {
 
     @api recordId;
 
+    // Limit document types --Modification
+    get acceptedFormats() {
+      return ['.pdf', '.docx', '.xlsx', '.csv'];
+    }
+
     closeModal(){
         this.dispatchEvent(new CustomEvent('selected'));
     }
