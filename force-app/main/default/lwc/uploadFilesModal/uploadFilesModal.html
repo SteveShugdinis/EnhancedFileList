@@ -25,10 +25,30 @@
             Upload Files
           </h2>
         </header>
+
+
+        <div
+          class="slds-modal__content slds-p-around_medium"
+          id="modal-content-id-2"
+          >
+          
+
+            <div class="slds-align_absolute-center">
+              <lightning-select 
+                name="LLG_FileType" 
+                label="File Type" 
+                value={dvalue}  
+                options={options}   
+                onchange={handleChange}>
+              </lightning-select>
+            </div>
+          </div>
+
+
         <div
           class="slds-modal__content slds-p-around_medium"
           id="modal-content-id-1"
-        >
+          >
           <div class="slds-align_absolute-center">
             <lightning-file-upload
               label="Attach Files"
